@@ -1,0 +1,65 @@
+{
+  "skill_name": "spec-observer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I've got this massive spec document for our API migration (api-migration-spec.md). It's like 800 lines with mermaid diagrams and task checklists. Can you turn it into something I can actually browse?",
+      "expected_output": "A single .jsx React artifact rendering the spec as an interactive UI with collapsible sections, ToC sidebar, rendered mermaid diagrams, and checklist progress.",
+      "should_trigger": true
+    },
+    {
+      "id": 2,
+      "prompt": "Visualize the spec please — there are two files: phase-1-design.md and phase-2-implementation.md",
+      "expected_output": "A React artifact with file tabs to switch between the two specs, plus all SpecObserver features.",
+      "should_trigger": true
+    },
+    {
+      "id": 3,
+      "prompt": "this plan is way too hard to read. I keep losing track of which tasks are done in each phase. can you render it as a nicer UI?",
+      "expected_output": "Agent reads the spec and generates a SpecObserver artifact with checklist progress tracking and collapsible phases.",
+      "should_trigger": true
+    },
+    {
+      "id": 4,
+      "prompt": "Hey, I need to update the README.md for our open source project — can you help me rewrite the installation section to be clearer?",
+      "expected_output": "Agent helps rewrite the README section. This is a documentation editing task, not a spec visualization task.",
+      "should_trigger": false
+    },
+    {
+      "id": 5,
+      "prompt": "Can you create a markdown document that outlines the architecture for our new payment service?",
+      "expected_output": "Agent creates a new spec document. This is content creation, not visualization of an existing spec.",
+      "should_trigger": false
+    },
+    {
+      "id": 6,
+      "prompt": "I have 4 spec files for the data pipeline project. show me the spec observer view so I can navigate between them during our review meeting",
+      "expected_output": "A React artifact with 4 file tabs and full SpecObserver UI.",
+      "should_trigger": true
+    },
+    {
+      "id": 7,
+      "prompt": "render this markdown as a nice preview so I can see how it looks before pushing to GitHub",
+      "expected_output": "Agent renders a simple markdown preview. This is a preview/formatting task, not spec-driven development visualization.",
+      "should_trigger": false
+    },
+    {
+      "id": 8,
+      "prompt": "I need to read through the technical-design-doc.md but it has like 30 sections with sequence diagrams. make it browsable with search",
+      "expected_output": "A SpecObserver artifact with search, collapsible sections, and rendered sequence diagrams.",
+      "should_trigger": true
+    },
+    {
+      "id": 9,
+      "prompt": "Convert my spec.md into a PowerPoint presentation for the stakeholder meeting",
+      "expected_output": "Agent creates a .pptx file from the spec content. This is a format conversion, not a spec viewer.",
+      "should_trigger": false
+    },
+    {
+      "id": 10,
+      "prompt": "observe the spec — it's the project-plan.md file I uploaded. I want to see the full structure at a glance",
+      "expected_output": "A SpecObserver artifact showing the full document structure with expandable sections and ToC.",
+      "should_trigger": true
+    }
+  ]
+}
