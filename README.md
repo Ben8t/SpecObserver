@@ -1,6 +1,6 @@
 # SpecObserver
 
-An agent skill that turns complex markdown spec documents into an interactive, navigable React UI.
+A tool that turns complex markdown spec documents into an interactive, navigable React UI.
 
 Built for **spec-driven development** workflows where agents work from detailed markdown plans. Instead of scrolling through raw markdown, SpecObserver generates a self-contained React artifact with collapsible sections, a navigation sidebar, search, Mermaid diagram rendering, and progress tracking.
 
@@ -25,7 +25,7 @@ You ask the agent to visualize your spec, and it generates a single `.jsx` artif
 
 ## Installation
 
-This is a skill package for Claude-based agents. Drop the `spec-observer/` folder into your skills directory:
+This is a skill package for AI coding agents. Drop the `spec-observer/` folder into your skills directory:
 
 ```
 your-project/
@@ -82,7 +82,7 @@ spec-observer/
 
 ## Design Decisions
 
-- **No npm dependencies at runtime** — the generated artifact only uses React, Tailwind utility classes, and lucide-react (all available in Claude artifacts)
+- **No npm dependencies at runtime** — the generated artifact only uses React, Tailwind utility classes, and lucide-react (all standard in modern React sandboxes)
 - **Mermaid loaded lazily from CDN** — only fetched when a mermaid block exists
 - **Manual markdown parsing** — no external libraries; regex-based parsing that handles the structural elements specs actually use
 - **Dark sidebar / light content** — high contrast for the navigation, easy on the eyes for reading
